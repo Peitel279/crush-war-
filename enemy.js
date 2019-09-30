@@ -52,7 +52,16 @@ function processEnemy() {
         
         rect(200, 300, 100, 50);        
         stroke("white");
-        
+    }
+
+    for (let i = 0; i < boxes.length; i++) {
+        let box = boxes[i];
+        for (let j = 0; j < enemies.length; j++) {
+            let enemy = enemies[j];
+            if (overlap(box, enemy)) {
+                
+            }
+        }
     }
 
     for(let i = 0; i < enemies.length; i++) {
@@ -68,7 +77,7 @@ function processEnemy() {
         enemies[i].y = clamp(enemies[i].y, enemies[i].h / 2, map.h - enemies[i].h / 2);
 
         enemy.bulletCounter++;
-        if (enemy.bulletCounter >= 200) {
+        if (enemy.bulletCounter >= 100) {
             enemy.bulletCounter = 0;
             createEnemyBullet(enemies[i], player);
         }

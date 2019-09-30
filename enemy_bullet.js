@@ -26,8 +26,6 @@ function createEnemyBullet(enemy, player) {
     const distance = {
         x: playerX - enemyX,
         y: playerY - enemyY,
-        w: 10,
-        h: 10,
     };
 
     const atkPlayer = normalize(distance);
@@ -37,6 +35,8 @@ function createEnemyBullet(enemy, player) {
         y: enemyY,
         vx: atkPlayer.x * 5,
         vy: atkPlayer.y * 5,
+        w: 10,
+        h: 10,
     };
 
     enemyBullets.push(newEnemyBullet);

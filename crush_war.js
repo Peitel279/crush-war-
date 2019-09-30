@@ -1,12 +1,18 @@
+let poopImage;
+
+function preload() {
+    poopImage = loadImage('poop.png');
+}
+
 function setup () {
     createCanvas(map.w, map.h);
 }
 
 function draw () {
     clear();
-    background("#000000");
+    background("#FFFFFF");
     stroke('brown');
-    fill('black');
+    fill('"#FFFFFF"');
     rect(0, 0, map.w, map.h);
     stroke("white");
     fill('white');

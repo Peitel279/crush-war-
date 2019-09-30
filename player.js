@@ -7,8 +7,8 @@ let atkDirection = {
 let player = {
     x: 400,
     y: 400,
-    w: 27,
-    h: 27,
+    w: 40,
+    h: 40,
     hp: 100,
 };
 
@@ -144,9 +144,9 @@ function processPlayer() {
     for (let i = 0; i < enemyBullets.length; i++) {
         let enemybullet = enemyBullets[i];
             if (overlap(player, enemybullet, false)) {
-                console.log("Ouch...");
                 player.hp -= 20;
                 enemyBullets.splice(i, 1);
+                console.log(player.hp);
             }
         }
     
